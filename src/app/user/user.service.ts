@@ -3,10 +3,9 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/find';
-//import { Auth } from './table/Auth';
 
 @Injectable()
-export class LoginService {
+export class UserService {
 
   constructor(private http: Http) { }
 
@@ -15,8 +14,8 @@ export class LoginService {
             .map(response => response.json() as any[]);
   }
 
-  login(email: string, senha: string): Observable<any[]> {
-        return this.http.get('http://localhost:3000/usuarios?email='+email+'&senha='+senha)
+  pesos(id): Observable<any[]> {
+        return this.http.get('http://localhost:3000/pesos?idusuario='+id)
             .map(response => response.json() as any[]);
   }
 }

@@ -1,72 +1,68 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from './login.service';
+import 'rxjs/add/operator/switchMap';
+import { Auth } from './Auth';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'login-cmp',
+    moduleId: module.id,
+    templateUrl: 'login.component.html',
+    //styleUrls: ['login.css']
 })
-export class LoginComponent implements OnInit {
 
-  //login: any[];
-  login: any;
+export class LoginComponent implements OnInit{
+    auth: any[];
+    autenticacao: string;
+    email: string;
+    senha: string;
+    erro = null;
 
-  constructor(private loginService: LoginService,
-        private router: Router) { }
+    constructor(private loginService: LoginService,
+        private route: ActivatedRoute, private router: Router) { }
 
-
-  
-
-  ngOnInit() {
-    this.loginService.all().
-            subscribe(login => {this.login = login;});
-  }
-
-  onSubmit(formulario){
-    let resposta: any;
-    //let id: any;
-    let id: any=this.buscaID(this.login, formulario.value.usuario, formulario.value.senha);;
-    //console.log(formulario.value.usuario);
-    resposta = this.verificacao(this.login, formulario.value.usuario, formulario.value.senha);
-    //console.log(id);
-
-    if(resposta==true)
-    {
-      this.router.navigate(['/pesos/'+id]);
+    ngOnInit(){
+        this.loginService.auth().
+            subscribe(auth => {this.auth = auth;
+                this.autenticacao=typeof(this.auth[0].idUsuario);
+            
+            if(this.autenticacao=='number')
+            {
+                this.router.navigate(['user']);
+            }
+        });
     }
-  }
 
-  verificacao(login: any[], user: any, senha: any)
-  {
-    for (let usuario of this.login) {
-            //this.var=this.var+1;
-            //console.log(usuario.nome);
-            /*usuario.email==user*/
-            if(usuario.senha==senha || usuario.email==user)
-            {
-              //console.log('senha e email iguais');
-              return true
-            }
-            //console.log(user);
+    entrar() {
+        let log: any;
+        let criterio: any;
+        this.loginService.login(this.email, this.senha).
+            subscribe(log => {log = log;
+                criterio =typeof(log[0].idUsuario);
+                console.log("log: "+log);
+
+                if(criterio=='[object Object]')
+                {
+                    this.router.navigate(['user']);
+                }                
+            });
+            alert("Informe seu email e senha corretamente.");
+            this.email="";
+            this.senha="";
+            
         }
-  }
+        
 
-  buscaID(login: any[], user: any, senha: any)
-  {
-    for (let usuario of this.login) {
-            //this.var=this.var+1;
-            //console.log(usuario.nome);
-            /*usuario.email==user*/
-            if(usuario.senha==senha || usuario.email==user)
-            {
-              //console.log('senha e email iguais');
-              //return true
-              return usuario.idUsuario;
-            }
-            //console.log(user);
+    /*entrar() {
+    this.authService.auth(this.email, this.senha)
+      .subscribe(usuarios => {
+        if (usuarios.length > 0) {
+          this.erro = null;
+          this.authService.set(usuarios[0]);
+          this.router.navigate(['admin']);
+        } else {
+          this.erro = 'Login ou senha incorretos';
         }
-  }
-
+      });
+  }*/
 }

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header" *ngFor="let usuario of auth; let i = index" class="container-fluid">
+                        <br><h4 class="title">{{usuario.nome}}</h4>
+                        <p class="category">Aqui é exibido o peso do usuario e a data em que a pesagem aconteceu:</p>
+                    </div>
+
+                    
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Peso</th>
+                                    <th>Data Pesagem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let peso of pesos">
+                                    <td>{{peso.peso}}</td>
+                                    <td>{{peso.datapesagem}}</td>
+                                    <td><button class="btn btn-info btn-fill btn-wd" (click)="deletar(peso.id)">Deletar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

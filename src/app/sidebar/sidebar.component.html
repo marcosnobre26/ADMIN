@@ -1,0 +1,31 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="#" class="simple-text">
+            <div class="logo-img">
+                <img src="../../assets/img/balance.png" alt="">
+            </div>
+            MY BALANCE
+        </a>
+    </div>
+    <ul class="nav">
+        <li class="divider" *ngIf="isNotMobileMenu()"></li>
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        </ul>
+        <button type="submit" id="logout" (click)="Logout()" class="btn btn-info btn-fill btn-wd">Logout</button>
+</div>
+
+<style>
+    button#logout {
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-top:-50px;
+        margin-top:230px;
+        margin-left:-80px;
+    }
+</style>

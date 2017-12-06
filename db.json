@@ -75,73 +75,73 @@
   ],
   "pesos": [
     {
-      "idPeso": 1,
+      "id": 1,
       "idusuario": 1,
       "peso": "60.5",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 2,
+      "id": 2,
       "idusuario": 1,
       "peso": "59.1",
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 3,
+      "id": 3,
       "idusuario": 2,
       "peso": "52.2",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 4,
+      "id": 4,
       "idusuario": 2,
       "peso": "62.5",
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 5,
+      "id": 5,
       "idusuario": 2,
       "peso": "63.2",
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 6,
+      "id": 6,
       "idusuario": 3,
       "peso": "65.5",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 7,
+      "id": 7,
       "idusuario": 3,
       "peso": "67.2",
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 8,
+      "id": 8,
       "idusuario": 4,
       "peso": "61.2",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 9,
+      "id": 9,
       "idusuario": 4,
       "peso": "62.3",
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 10,
+      "id": 10,
       "idusuario": 5,
       "peso": "61.1",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 11,
+      "id": 11,
       "idusuario": 5,
       "peso": "60.6",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 12,
+      "id": 12,
       "idusuario": 5,
       "peso": "63.9",
 	  "datapesagem": "2017-10-26"
@@ -184,5 +184,19 @@
 	{
       "idBalanca": 8
     }
+  ],
+  "auth": [
+	{
+		"idUsuario": 4,
+		"nome": "Osvaldo Limeira Campos",
+		"email": "osvaldocampos32@gmail.com",
+		"senha": "ads432df",
+		"datanascimento": "2003-11-11",
+		"altura": "1.82",
+		"peso": "99.2",
+		"sexo": "masculino",
+		"datacadastro": "2017-09-16",
+		"status": "true"
+	}
   ]
 }
