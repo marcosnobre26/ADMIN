@@ -22,8 +22,8 @@ export class UserComponent implements OnInit{
         this.userService.auth().
             subscribe(auth => {
                 this.auth = auth;
-                this.autenticacao=typeof(this.auth[0].idUsuario);
-                this.usuario = new Auth(this.auth[0].idUsuario, this.auth[0].nome, this.auth[0].email, this.auth[0].senha, this.auth[0].datanascimento, this.auth[0].altura, this.auth[0].peso, this.auth[0].sexo, this.auth[0].datacadastro, this.auth[0].status);
+                this.autenticacao=typeof(this.auth[0].id);
+                this.usuario = new Auth(this.auth[0].id, this.auth[0].nome, this.auth[0].email, this.auth[0].senha, this.auth[0].datanascimento, this.auth[0].altura, this.auth[0].peso, this.auth[0].sexo, this.auth[0].datacadastro, this.auth[0].status);
                 if(this.autenticacao!='number')
                 {
                     this.router.navigate(['']);

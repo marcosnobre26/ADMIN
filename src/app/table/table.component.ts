@@ -31,7 +31,7 @@ export class TableComponent implements OnInit{
         this.tableService.auth().
             subscribe(auth => {
                 this.auth = auth;
-                this.autenticacao=typeof(this.auth[0].idUsuario);
+                this.autenticacao=typeof(this.auth[0].id);
                 if(this.autenticacao!='number')
                 {
                     this.router.navigate(['']);
@@ -46,9 +46,9 @@ export class TableComponent implements OnInit{
 
     informacoes(){
         this.tableService.auth().subscribe(auth => {this.auth = auth;
-            this.autenticacao=typeof(this.auth[0].idUsuario);
+            this.autenticacao=typeof(this.auth[0].id);
             
-            this.tableService.pesos(this.auth[0].idUsuario)
+            this.tableService.pesos(this.auth[0].id)
                 .subscribe(pesos => {this.pesos = pesos;});
         });
     }

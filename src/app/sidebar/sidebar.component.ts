@@ -47,7 +47,7 @@ export class SidebarComponent implements OnInit {
         this.sidebarService.auth().
             subscribe(auth => {
                 this.auth = auth;
-                this.sidebarService.logout(this.auth[0].idUsuario).
+                this.sidebarService.logout(this.auth[0].id).
                     subscribe();
         });
     }

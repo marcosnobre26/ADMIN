@@ -1,5 +1,5 @@
 export class Auth {
-    public idUsuario: number;
+    public id: number;
     public nome: string;
     public email: string;
     public senha: string;
@@ -10,8 +10,8 @@ export class Auth {
     public datacadastro: string;
     public status: string;
 
-    constructor(idUsuario: number, nome: string, email: string, senha: string, datanascimento: string, altura: string, peso: string, sexo: string, datacadastro: string, status: string) {
-        this.idUsuario = idUsuario;
+    constructor(id: number, nome: string, email: string, senha: string, datanascimento: string, altura: string, peso: string, sexo: string, datacadastro: string, status: string) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;

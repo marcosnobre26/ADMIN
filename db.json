@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "idUsuario": 1,
+      "id": 1,
       "nome": "Robson Silva da Sousa",
       "email": "robson321@gmail.com",
 	  "senha": "546256345",
@@ -13,7 +13,7 @@
 	  "status": "true"
     },
 	{
-      "idUsuario": 2,
+      "id": 2,
       "nome": "Cristina Ferreira Matos",
       "email": "crisferreira@gmail.com",
 	  "senha": "34253455",
@@ -25,7 +25,7 @@
 	  "status": "true"
     },
 	{
-      "idUsuario": 3,
+      "id": 3,
       "nome": "Sabrina Borges Machado",
       "email": "brinaborges@gmail.com",
 	  "senha": "445325243",
@@ -37,7 +37,7 @@
 	  "status": "true"
     },
 	{
-      "idUsuario": 4,
+      "id": 4,
       "nome": "Osvaldo Limeira Campos",
       "email": "osvaldocampos32@gmail.com",
 	  "senha": "ads432df",
@@ -49,7 +49,7 @@
 	  "status": "true"
     },
 	{
-      "idUsuario": 5,
+      "id": 5,
       "nome": "Ronaldo Malone da Silva",
       "email": "malone332@gmail.com",
 	  "senha": "fads3asd32",
@@ -61,7 +61,7 @@
 	  "status": "true"
     },
 	{
-      "idUsuario": 6,
+      "id": 6,
       "nome": "Marcos Nobre Castro Silva",
       "email": "marcosnobre26@gmail.com",
 	  "senha": "123456789",
@@ -147,13 +147,13 @@
 	  "datapesagem": "2017-10-26"
     },
 	{
-      "idPeso": 13,
+      "id": 13,
       "idusuario": 6,
       "peso": "62.1",
 	  "datapesagem": "2017-10-16"
     },
 	{
-      "idPeso": 14,
+      "id": 14,
       "idusuario": 6,
       "peso": "59.1",
 	  "datapesagem": "2017-10-26"
@@ -161,33 +161,33 @@
   ],
   "balancas": [
     {
-      "idBalanca": 1
+      "id": 1
     },
 	{
-      "idBalanca": 2
+      "id": 2
     },
 	{
-      "idBalanca": 3
+      "id": 3
     },
 	{
-      "idBalanca": 4
+      "id": 4
     },
 	{
-      "idBalanca": 5
+      "id": 5
     },
 	{
-      "idBalanca": 6
+      "id": 6
     },
 	{
-      "idBalanca": 7
+      "id": 7
     },
 	{
-      "idBalanca": 8
+      "id": 8
     }
   ],
   "auth": [
 	{
-		"idUsuario": 4,
+		"id": 4,
 		"nome": "Osvaldo Limeira Campos",
 		"email": "osvaldocampos32@gmail.com",
 		"senha": "ads432df",

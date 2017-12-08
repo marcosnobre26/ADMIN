@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit{
     ngOnInit(){
         this.loginService.auth().
             subscribe(auth => {this.auth = auth;
-                this.autenticacao=typeof(this.auth[0].idUsuario);
+                this.autenticacao=typeof(this.auth[0].id);
             
             if(this.autenticacao=='number')
             {
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit{
         let criterio: any;
         this.loginService.login(this.email, this.senha).
             subscribe(log => {log = log;
-                criterio =typeof(log[0].idUsuario);
+                criterio =typeof(log[0].id);
                 console.log("log: "+log);
 
                 if(criterio=='[object Object]')
