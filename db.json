@@ -187,16 +187,16 @@
   ],
   "auth": [
     {
-      "id": 3,
-      "nome": "Sabrina Borges Machado",
-      "email": "brinaborges@gmail.com",
-      "senha": "445325243",
-      "datanascimento": "2002-05-03",
-      "altura": "1.74",
-      "peso": "81.1",
+      "nome": "Cristina Ferreira Matos",
+      "email": "crisferreira@gmail.com",
+      "senha": "34253455",
+      "datanascimento": "1999-08-13",
+      "altura": "1.64",
+      "peso": "69.2",
       "sexo": "feminino",
       "datacadastro": "2017-09-16",
-      "status": "true"
+      "status": "true",
+      "id": 1
     }
   ]
 }
