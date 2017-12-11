@@ -88,9 +88,9 @@ export class UserComponent implements OnInit{
                 this.editar_erro = true;
             });
 
-            alert("As alterações foram realizadas com sucesso.");
+            //alert("As alterações foram realizadas com sucesso.");
 
-            this.router.navigate(['user']);
+            //this.router.navigate(['user']);
     }
 
 

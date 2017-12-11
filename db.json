@@ -2,12 +2,12 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Robson Silva da Sousa",
-      "email": "robson321@gmail.com",
-      "senha": "546256345",
-      "datanascimento": "2001-11-22",
-      "altura": "1.70",
-      "peso": "70.5",
+      "nome": "Ronaldo Malone da Teste",
+      "email": "malone332@gmail.com",
+      "senha": "fads3asd32",
+      "datanascimento": "2003-09-01",
+      "altura": "1.74",
+      "peso": "80.9",
       "sexo": "masculino",
       "datacadastro": "2017-09-16",
       "status": "true"
@@ -26,12 +26,12 @@
     },
     {
       "id": 3,
-      "nome": "Sabrina Borges Machado",
+      "nome": "Sabrina Borges Teste",
       "email": "brinaborges@gmail.com",
       "senha": "445325243",
       "datanascimento": "2002-05-03",
-      "altura": "1.74",
-      "peso": "81.1",
+      "altura": 1.8,
+      "peso": 88,
       "sexo": "feminino",
       "datacadastro": "2017-09-16",
       "status": "true"
@@ -74,18 +74,6 @@
     }
   ],
   "pesos": [
-    {
-      "id": 1,
-      "idusuario": 1,
-      "peso": "60.5",
-      "datapesagem": "2017-10-16"
-    },
-    {
-      "id": 2,
-      "idusuario": 1,
-      "peso": "59.1",
-      "datapesagem": "2017-10-26"
-    },
     {
       "id": 3,
       "idusuario": 2,
@@ -187,16 +175,16 @@
   ],
   "auth": [
     {
-      "id": 3,
-      "nome": "Sabrina Borges Machado",
-      "email": "brinaborges@gmail.com",
-      "senha": "445325243",
-      "datanascimento": "2002-05-03",
+      "nome": "Ronaldo Malone da Teste",
+      "email": "malone332@gmail.com",
+      "senha": "fads3asd32",
+      "datanascimento": "2003-09-01",
       "altura": "1.74",
-      "peso": "81.1",
-      "sexo": "feminino",
+      "peso": "80.9",
+      "sexo": "masculino",
       "datacadastro": "2017-09-16",
-      "status": "true"
+      "status": "true",
+      "id": 1
     }
   ]
 }
