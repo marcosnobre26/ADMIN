@@ -173,28 +173,5 @@
       "id": 8
     }
   ],
-  "auth": [
-    {
-<<<<<<< HEAD
-      "nome": "Cristina Ferreira Matos",
-      "email": "crisferreira@gmail.com",
-      "senha": "34253455",
-      "datanascimento": "1999-08-13",
-      "altura": "1.64",
-      "peso": "69.2",
-      "sexo": "feminino",
-=======
-      "nome": "Ronaldo Malone da Teste",
-      "email": "malone332@gmail.com",
-      "senha": "fads3asd32",
-      "datanascimento": "2003-09-01",
-      "altura": "1.74",
-      "peso": "80.9",
-      "sexo": "masculino",
->>>>>>> c13d1d2a269f7bc51d83038a8b9c7c1c1dc6cd45
-      "datacadastro": "2017-09-16",
-      "status": "true",
-      "id": 1
-    }
-  ]
+  "auth": []
 }
