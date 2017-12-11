@@ -31,10 +31,10 @@ export class TableComponent implements OnInit{
         this.tableService.auth().
             subscribe(auth => {
                 this.auth = auth;
-                this.autenticacao=typeof(this.auth[0].id);
-                if(this.autenticacao!='number')
+                if(auth.length!=1)
                 {
                     this.router.navigate(['']);
+                    window.location.reload();
                 }
         });
     }

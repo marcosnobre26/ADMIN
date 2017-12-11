@@ -7,11 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-    imports: [ /*RouterModule,*/ CommonModule,CommonModule,
+    imports: [ CommonModule,CommonModule,
     BrowserModule,
     FormsModule ],
     declarations: [ LoginComponent ],
-    exports: [ /*LoginComponent*/ ],
+    exports: [  ],
     providers: [LoginService]
 })
 

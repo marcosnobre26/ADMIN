@@ -1,4 +1,4 @@
-<div *ngIf="autenticacao == 'number'">
+<div *ngIf="autenticacao == 'autenticado'">
 
     <div class="wrapper">
         <div class="sidebar" data-background-color="white" data-active-color="danger">
@@ -15,7 +15,7 @@
     <fixedplugin-cmp></fixedplugin-cmp>
 </div>
 
-<div *ngIf="autenticacao == 'undefined'">
+<div *ngIf="autenticacao == 'login'">
     <router-outlet></router-outlet>
 </div>
 

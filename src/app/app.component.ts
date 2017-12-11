@@ -20,7 +20,14 @@ export class AppComponent {
   ngOnInit(){
         this.appService.auth().
             subscribe(auth => {this.auth = auth;
-              this.autenticacao=typeof(this.auth[0].id);
-              console.log(this.autenticacao)});
+
+              if(auth.length==1)
+                {
+                  this.autenticacao="autenticado";
+                }
+                else{
+                  this.autenticacao="login";
+                }
+        });
     }
 }

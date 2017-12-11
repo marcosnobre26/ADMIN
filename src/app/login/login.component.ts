@@ -13,7 +13,6 @@ import { Auth } from './Auth';
 
 export class LoginComponent implements OnInit{
     auth: any[];
-    autenticacao: string;
     email: string;
     senha: string;
     erro = null;
@@ -24,45 +23,31 @@ export class LoginComponent implements OnInit{
     ngOnInit(){
         this.loginService.auth().
             subscribe(auth => {this.auth = auth;
-                this.autenticacao=typeof(this.auth[0].id);
-            
-            if(this.autenticacao=='number')
+
+            if(auth.length==1)
             {
                 this.router.navigate(['user']);
+                window.location.reload();
             }
         });
     }
 
     entrar() {
         let log: any;
-        let criterio: any;
         this.loginService.login(this.email, this.senha).
             subscribe(log => {log = log;
-                criterio =typeof(log[0].id);
-                console.log("log: "+log);
-
-                if(criterio=='[object Object]')
+                if(log.length==1)
                 {
-                    this.router.navigate(['user']);
-                }                
-            });
-            alert("Informe seu email e senha corretamente.");
-            this.email="";
-            this.senha="";
-            
-        }
-        
+                    this.loginService.addUser(log[0].id, log[0].nome,log[0].email,log[0].senha,log[0].datanascimento,log[0].altura,log[0].peso,log[0].sexo,log[0].datacadastro, log[0].status).subscribe();
 
-    /*entrar() {
-    this.authService.auth(this.email, this.senha)
-      .subscribe(usuarios => {
-        if (usuarios.length > 0) {
-          this.erro = null;
-          this.authService.set(usuarios[0]);
-          this.router.navigate(['admin']);
-        } else {
-          this.erro = 'Login ou senha incorretos';
+                    this.router.navigate(['user']);
+                }
+                else
+                {
+                    alert("Informe seu email e senha corretamente.");
+                    this.email="";
+                    this.senha="";  
+                }               
+            });                     
         }
-      });
-  }*/
 }

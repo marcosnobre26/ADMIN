@@ -50,6 +50,7 @@ export class SidebarComponent implements OnInit {
                 this.sidebarService.logout(this.auth[0].id).
                     subscribe();
         });
+        this.router.navigate(['login']);
     }
 
 }
