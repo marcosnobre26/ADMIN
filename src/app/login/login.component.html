@@ -1,18 +1,18 @@
 <div class="login-page animate">
 	<div class="row">
 		<div class="col-lg-4 col-lg-offset-4">
-        	<img src="assets/images/flat-avatar.png" class="user-avatar" />
-			<h1>Ani Angular2 <small>Free Edition</small></h1>
+			<h1>My Balance</h1>
+			<small> Coloque suas credências para acessar o aplicativo </small>
 			<form role="form" name="gravaDados" ng-app="myApp" ng-controller="testectrl">
 				<div class="form-content">
 					<div class="form-group">
 						<input type="text" class="form-control input-underline input-lg" id="email" placeholder="Email" name="email" autocorrect="off" [(ngModel)]="email">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control input-underline input-lg" id="senha" placeholder="Password" name="senha" autocorrect="off" [(ngModel)]="senha">
+						<input type="password" class="form-control input-underline input-lg" id="senha" placeholder="Senha" name="senha" autocorrect="off" [(ngModel)]="senha">
 					</div>
 				</div>
-				<a class="btn rounded-btn" (click)="entrar()"> Log in </a>
+				<a class="btn rounded-btn" (click)="entrar()"> Entrar </a>
 			</form>
 		</div>	
 	</div>

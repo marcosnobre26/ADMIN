@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit{
 
             if(auth.length==1)
             {
-                this.router.navigate(['user']);
+                this.router.navigate(['table']);
                 window.location.reload();
             }
         });
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit{
                 {
                     this.loginService.addUser(log[0].id, log[0].nome,log[0].email,log[0].senha,log[0].datanascimento,log[0].altura,log[0].peso,log[0].sexo,log[0].datacadastro, log[0].status).subscribe();
 
-                    this.router.navigate(['user']);
+                    this.router.navigate(['table']);
                 }
                 else
                 {
